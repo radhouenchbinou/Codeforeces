@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+string s;
+unsigned long long int pos;
+cin>>s;
+while(s.find("WUB")!=4294967295){
+    if (s.find("WUB")==0 || s.find("WUB")==(s.length()-3)){s.erase(s.find("WUB"),3);}
+        else {
+           pos=s.find("WUB");
+           s.erase(pos,3);
+           s.insert(pos," ");
+        };
+
+};
+cout<<s;
+return 0;
+}
