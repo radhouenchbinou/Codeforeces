@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "VoiceFirst",
+    "slug": "voicefirst",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a2e"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.voicefirst",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "VoiceFirst needs microphone access for voice messages and calls.",
+        "NSCameraUsageDescription": "VoiceFirst needs camera access for photo verification.",
+        "NSPhotoLibraryUsageDescription": "VoiceFirst needs photo library access to upload your profile photo."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a2e"
+      },
+      "package": "app.voicefirst",
+      "permissions": [
+        "RECORD_AUDIO",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#1a1a2e"
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "scheme": "voicefirst",
+    "privacy": "unlisted",
+    "extra": {
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    }
+  }
+}
