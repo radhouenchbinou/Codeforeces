@@ -3,6 +3,10 @@ import { Stack, useRouter, useSegments } from 'expo-router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useAuthStore } from '../src/stores/authStore';
+import { registerFcmToken, setBackgroundMessageHandler } from '../src/services/notifications';
+
+// Register background/quit-state FCM handler at module level (required by Firebase)
+setBackgroundMessageHandler();
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -33,6 +37,13 @@ function AuthGuard() {
       router.replace('/(app)/discovery');
     }
   }, [accessToken, isOnboarded, isLoading, segments]);
+
+  // Register FCM token whenever the user logs in
+  useEffect(() => {
+    if (accessToken) {
+      registerFcmToken().catch(() => {/* silently ignore — non-critical */});
+    }
+  }, [accessToken]);
 
   return null;
 }
