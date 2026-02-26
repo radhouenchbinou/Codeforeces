@@ -98,11 +98,6 @@ export const chatApi = {
   getToken: () => api.get('/chat/token'),
 };
 
-// Voice
-export const voiceApi = {
-  getToken: (matchId: string) => api.get(`/voice/token/${matchId}`),
-};
-
 // Moderation
 export const moderationApi = {
   report: (targetId: string, reason: string, details?: string) =>

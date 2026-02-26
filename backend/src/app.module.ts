@@ -10,7 +10,6 @@ import { VerificationModule } from './modules/verification/verification.module';
 import { DiscoveryModule } from './modules/discovery/discovery.module';
 import { MatchesModule } from './modules/matches/matches.module';
 import { ChatModule } from './modules/chat/chat.module';
-import { VoiceModule } from './modules/voice/voice.module';
 import { ScoringModule } from './modules/scoring/scoring.module';
 import { ModerationModule } from './modules/moderation/moderation.module';
 import { GdprModule } from './modules/gdpr/gdpr.module';
@@ -51,7 +50,6 @@ import { NotificationsModule } from './modules/notifications/notifications.modul
     DiscoveryModule,
     MatchesModule,
     ChatModule,
-    VoiceModule,
     ScoringModule,
     ModerationModule,
     GdprModule,

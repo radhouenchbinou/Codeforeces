@@ -21,9 +21,6 @@ export default () => ({
   STREAM_API_KEY: process.env.STREAM_API_KEY,
   STREAM_API_SECRET: process.env.STREAM_API_SECRET,
 
-  AGORA_APP_ID: process.env.AGORA_APP_ID,
-  AGORA_APP_CERTIFICATE: process.env.AGORA_APP_CERTIFICATE,
-
   EMAIL_PROVIDER: process.env.EMAIL_PROVIDER || 'smtp',
   SMTP_HOST: process.env.SMTP_HOST,
   SMTP_PORT: parseInt(process.env.SMTP_PORT || '587', 10),
@@ -42,7 +39,6 @@ export default () => ({
   THROTTLE_TTL: parseInt(process.env.THROTTLE_TTL || '60', 10),
   THROTTLE_LIMIT: parseInt(process.env.THROTTLE_LIMIT || '100', 10),
 
-  VOICE_CALL_UNLOCK_THRESHOLD: parseInt(process.env.VOICE_CALL_UNLOCK_THRESHOLD || '10', 10),
   DAILY_DECK_SIZE: parseInt(process.env.DAILY_DECK_SIZE || '7', 10),
   MIN_AGE: parseInt(process.env.MIN_AGE || '18', 10),
   GDPR_CONSENT_VERSION: process.env.GDPR_CONSENT_VERSION || '1.0',
